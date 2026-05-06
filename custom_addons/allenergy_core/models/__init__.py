@@ -3,3 +3,4 @@ from . import res_partner
 from . import project_project
 from . import project_task
 from . import maintenance_equipment
+from . import sale_order
