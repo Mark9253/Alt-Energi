@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <!--
+        Placeholder solar inspection items, modelled on the existing
+        "Solar PV System Inspection Report" PDF in /docs/source-materials/.
+        Charlotte will provide the final list. When the spec lands, add
+        records here, set the existing placeholders inactive, and bump
+        the module version.
+    -->
+
+    <!-- Section 1: DC Array Design -->
+    <record id="solar_item_dc_001" model="allenergy.worksheet.solar.item">
+        <field name="sequence">10</field><field name="section">dc_array</field>
+        <field name="name">Module condition and orientation</field>
+    </record>
+    <record id="solar_item_dc_002" model="allenergy.worksheet.solar.item">
+        <field name="sequence">20</field><field name="section">dc_array</field>
+        <field name="name">String voltage at MPPT inputs</field>
+    </record>
+    <record id="solar_item_dc_003" model="allenergy.worksheet.solar.item">
+        <field name="sequence">30</field><field name="section">dc_array</field>
+        <field name="name">DC isolator condition and operation</field>
+    </record>
+    <record id="solar_item_dc_004" model="allenergy.worksheet.solar.item">
+        <field name="sequence">40</field><field name="section">dc_array</field>
+        <field name="name">Cabling, connectors, and routing</field>
+    </record>
+
+    <!-- Section 2: Overvoltage Protection -->
+    <record id="solar_item_ov_001" model="allenergy.worksheet.solar.item">
+        <field name="sequence">110</field><field name="section">overvoltage</field>
+        <field name="name">DC surge arrestor present and operational</field>
+    </record>
+    <record id="solar_item_ov_002" model="allenergy.worksheet.solar.item">
+        <field name="sequence">120</field><field name="section">overvoltage</field>
+        <field name="name">AC surge arrestor present and operational</field>
+    </record>
+    <record id="solar_item_ov_003" model="allenergy.worksheet.solar.item">
+        <field name="sequence">130</field><field name="section">overvoltage</field>
+        <field name="name">Earthing and bonding</field>
+    </record>
+
+    <!-- Section 3: AC Circuit -->
+    <record id="solar_item_ac_001" model="allenergy.worksheet.solar.item">
+        <field name="sequence">210</field><field name="section">ac_circuit</field>
+        <field name="name">AC isolator location and operation</field>
+    </record>
+    <record id="solar_item_ac_002" model="allenergy.worksheet.solar.item">
+        <field name="sequence">220</field><field name="section">ac_circuit</field>
+        <field name="name">RCD/RCBO present and tested</field>
+    </record>
+    <record id="solar_item_ac_003" model="allenergy.worksheet.solar.item">
+        <field name="sequence">230</field><field name="section">ac_circuit</field>
+        <field name="name">Inverter status and error log review</field>
+    </record>
+    <record id="solar_item_ac_004" model="allenergy.worksheet.solar.item">
+        <field name="sequence">240</field><field name="section">ac_circuit</field>
+        <field name="name">Generation meter reading recorded</field>
+    </record>
+
+    <!-- Section 4: Labelling -->
+    <record id="solar_item_lb_001" model="allenergy.worksheet.solar.item">
+        <field name="sequence">310</field><field name="section">labelling</field>
+        <field name="name">Dual supply warning label at consumer unit</field>
+    </record>
+    <record id="solar_item_lb_002" model="allenergy.worksheet.solar.item">
+        <field name="sequence">320</field><field name="section">labelling</field>
+        <field name="name">Inverter and isolator labels legible</field>
+    </record>
+    <record id="solar_item_lb_003" model="allenergy.worksheet.solar.item">
+        <field name="sequence">330</field><field name="section">labelling</field>
+        <field name="name">Emergency shutdown procedure displayed</field>
+    </record>
+
+    <!-- Section 5: Mechanical Installation -->
+    <record id="solar_item_me_001" model="allenergy.worksheet.solar.item">
+        <field name="sequence">410</field><field name="section">mechanical</field>
+        <field name="name">Mounting structure integrity</field>
+    </record>
+    <record id="solar_item_me_002" model="allenergy.worksheet.solar.item">
+        <field name="sequence">420</field><field name="section">mechanical</field>
+        <field name="name">Roof flashings and weather sealing</field>
+    </record>
+    <record id="solar_item_me_003" model="allenergy.worksheet.solar.item">
+        <field name="sequence">430</field><field name="section">mechanical</field>
+        <field name="name">Bird and pest deterrents</field>
+    </record>
+
+    <!-- Section 6: Performance Comparison -->
+    <record id="solar_item_pf_001" model="allenergy.worksheet.solar.item">
+        <field name="sequence">510</field><field name="section">performance</field>
+        <field name="name">Annual yield vs design estimate</field>
+    </record>
+    <record id="solar_item_pf_002" model="allenergy.worksheet.solar.item">
+        <field name="sequence">520</field><field name="section">performance</field>
+        <field name="name">Monitoring portal accessibility verified</field>
+    </record>
+
+</odoo>

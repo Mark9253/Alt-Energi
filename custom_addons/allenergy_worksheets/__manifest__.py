@@ -23,7 +23,9 @@ Provides:
     'data': [
         'security/ir.model.access.csv',
         'data/biomass_worksheet_items.xml',
+        'data/solar_worksheet_items.xml',
         'views/allenergy_worksheet_biomass_views.xml',
+        'views/allenergy_worksheet_solar_views.xml',
         'views/project_task_views.xml',
     ],
     'installable': True,

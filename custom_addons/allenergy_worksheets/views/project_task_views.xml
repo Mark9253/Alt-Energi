@@ -11,6 +11,10 @@
                         class="oe_stat_button" icon="fa-fire">
                     <field name="biomass_worksheet_count" widget="statinfo" string="Biomass"/>
                 </button>
+                <button name="action_open_solar_worksheets" type="object"
+                        class="oe_stat_button" icon="fa-sun-o">
+                    <field name="solar_worksheet_count" widget="statinfo" string="Solar"/>
+                </button>
             </xpath>
         </field>
     </record>
