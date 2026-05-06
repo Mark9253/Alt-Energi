@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_project_form_allenergy" model="ir.ui.view">
+        <field name="name">project.project.form.allenergy</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="AllEnergy Site" name="allenergy_site">
+                    <group string="Coordinates">
+                        <field name="site_latitude"/>
+                        <field name="site_longitude"/>
+                        <field name="geofence_radius_meters"/>
+                        <field name="coords_manual_override"/>
+                        <field name="geocoding_source" readonly="1"/>
+                        <field name="geocoding_accuracy" readonly="1"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

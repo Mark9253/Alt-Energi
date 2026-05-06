@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_partner_form_allenergy" model="ir.ui.view">
+        <field name="name">res.partner.form.allenergy</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='category_id']" position="after">
+                <field name="is_site"/>
+                <field name="postcode_band" readonly="1"/>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="AllEnergy Site" name="allenergy_site">
+                    <group>
+                        <group string="Coordinates">
+                            <field name="site_latitude"/>
+                            <field name="site_longitude"/>
+                            <field name="geofence_radius_meters"/>
+                            <field name="coords_manual_override"/>
+                            <field name="geocoding_source" readonly="1"/>
+                            <field name="geocoding_accuracy" readonly="1"/>
+                        </group>
+                        <group string="Monitoring Portals">
+                            <field name="soliscloud_plant_id"/>
+                            <field name="soliscloud_station_id"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_partner_tree_allenergy" model="ir.ui.view">
+        <field name="name">res.partner.list.allenergy</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='country_id']" position="after">
+                <field name="postcode_band" optional="show"/>
+                <field name="is_site" optional="hide"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_res_partner_filter_allenergy" model="ir.ui.view">
+        <field name="name">res.partner.search.allenergy</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <filter string="Sites" name="filter_is_site" domain="[('is_site','=',True)]"/>
+                <separator/>
+                <filter string="Local (0-30 mi)" name="band_local"
+                        domain="[('postcode_band','=','local')]"/>
+                <filter string="Near (31-75 mi)" name="band_near"
+                        domain="[('postcode_band','=','near')]"/>
+                <filter string="Mid (76-150 mi)" name="band_mid"
+                        domain="[('postcode_band','=','mid')]"/>
+                <filter string="Far (151+ mi)" name="band_far"
+                        domain="[('postcode_band','=','far')]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Postcode Band" name="group_postcode_band"
+                            context="{'group_by': 'postcode_band'}"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
