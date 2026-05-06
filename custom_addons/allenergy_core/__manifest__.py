@@ -27,9 +27,11 @@ Provides:
         'industry_fsm',
     ],
     'data': [
+        'security/allenergy_security.xml',
         'security/ir.model.access.csv',
         'views/res_partner_views.xml',
         'views/project_project_views.xml',
+        'views/maintenance_equipment_views.xml',
     ],
     'demo': [],
     'installable': True,

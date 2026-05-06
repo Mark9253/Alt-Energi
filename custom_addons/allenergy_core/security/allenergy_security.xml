@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="0">
+
+    <record id="module_category_allenergy" model="ir.module.category">
+        <field name="name">AllEnergy</field>
+        <field name="description">Access rights for the Alt-Energi Services build.</field>
+        <field name="sequence">20</field>
+    </record>
+
+    <record id="group_allenergy_user" model="res.groups">
+        <field name="name">User</field>
+        <field name="category_id" ref="module_category_allenergy"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <record id="group_allenergy_sales" model="res.groups">
+        <field name="name">Sales (Read-Only Assets)</field>
+        <field name="category_id" ref="module_category_allenergy"/>
+        <field name="implied_ids" eval="[(4, ref('group_allenergy_user'))]"/>
+    </record>
+
+    <record id="group_allenergy_service" model="res.groups">
+        <field name="name">Service (Full Asset Access)</field>
+        <field name="category_id" ref="module_category_allenergy"/>
+        <field name="implied_ids" eval="[(4, ref('group_allenergy_user'))]"/>
+    </record>
+
+    <record id="group_allenergy_admin" model="res.groups">
+        <field name="name">Administrator</field>
+        <field name="category_id" ref="module_category_allenergy"/>
+        <field name="implied_ids" eval="[(4, ref('group_allenergy_service')), (4, ref('group_allenergy_sales'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>
+
+</odoo>
