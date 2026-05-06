@@ -35,7 +35,9 @@ Provides:
         'views/project_project_views.xml',
         'views/maintenance_equipment_views.xml',
     ],
-    'demo': [],
+    'demo': [
+        'data/demo_partners_assets.xml',
+    ],
     'installable': True,
     'application': False,
     'auto_install': False,

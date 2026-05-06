@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <!-- Worcester local: garden centre, solar PV. Distance ~2 mi, band local. -->
+    <record id="demo_client_worcester_garden" model="res.partner">
+        <field name="name">Worcester Garden Centre Ltd</field>
+        <field name="is_company">1</field>
+        <field name="is_site">0</field>
+        <field name="street">Bromsgrove Road</field>
+        <field name="city">Worcester</field>
+        <field name="zip">WR4 0BD</field>
+        <field name="country_id" ref="base.uk"/>
+        <field name="phone">+44 1905 100001</field>
+        <field name="email">info@worcestergardencentre.demo</field>
+    </record>
+    <record id="demo_site_worcester_garden" model="res.partner">
+        <field name="name">Worcester Garden Centre - Bromsgrove Road Site</field>
+        <field name="parent_id" ref="demo_client_worcester_garden"/>
+        <field name="type">other</field>
+        <field name="is_company">0</field>
+        <field name="is_site">1</field>
+        <field name="street">Bromsgrove Road</field>
+        <field name="city">Worcester</field>
+        <field name="zip">WR4 0BD</field>
+        <field name="country_id" ref="base.uk"/>
+    </record>
+    <record id="demo_asset_worcester_garden_inverter" model="maintenance.equipment">
+        <field name="name">Solis 30kW Solar Inverter</field>
+        <field name="partner_id" ref="demo_site_worcester_garden"/>
+        <field name="asset_type">inverter</field>
+        <field name="manufacturer">Solis</field>
+        <field name="model_number">S5-GR3P30K</field>
+        <field name="serial_number">SLS-WR-30001</field>
+        <field name="system_capacity_kw">30.0</field>
+        <field name="install_date">2023-04-12</field>
+        <field name="warranty_end_date">2033-04-12</field>
+        <field name="monitoring_portal">solis</field>
+        <field name="monitoring_plant_id">PLANT-WR-30001</field>
+    </record>
+
+    <!-- Hereford: farm co-op, biomass boiler. Distance ~27 mi, band local. -->
+    <record id="demo_client_hereford_farm" model="res.partner">
+        <field name="name">Hereford Farm Co-operative</field>
+        <field name="is_company">1</field>
+        <field name="is_site">0</field>
+        <field name="street">High Town</field>
+        <field name="city">Hereford</field>
+        <field name="zip">HR1 2QH</field>
+        <field name="country_id" ref="base.uk"/>
+        <field name="phone">+44 1432 100002</field>
+        <field name="email">accounts@herefordfarmcoop.demo</field>
+    </record>
+    <record id="demo_site_hereford_farm" model="res.partner">
+        <field name="name">Hereford Farm Co-operative - Main Yard</field>
+        <field name="parent_id" ref="demo_client_hereford_farm"/>
+        <field name="type">other</field>
+        <field name="is_company">0</field>
+        <field name="is_site">1</field>
+        <field name="street">High Town</field>
+        <field name="city">Hereford</field>
+        <field name="zip">HR1 2QH</field>
+        <field name="country_id" ref="base.uk"/>
+    </record>
+    <record id="demo_asset_hereford_boiler" model="maintenance.equipment">
+        <field name="name">Heizomat HSV-160 Biomass Boiler</field>
+        <field name="partner_id" ref="demo_site_hereford_farm"/>
+        <field name="asset_type">boiler</field>
+        <field name="manufacturer">Heizomat</field>
+        <field name="model_number">HSV 160</field>
+        <field name="serial_number">HZM-HR-16001</field>
+        <field name="vg_number">VG-2022-1601</field>
+        <field name="system_capacity_kw">160.0</field>
+        <field name="install_date">2022-09-05</field>
+        <field name="warranty_end_date">2027-09-05</field>
+        <field name="monitoring_portal">none</field>
+    </record>
+
+    <!-- Birmingham: recycling firm, solar PV. Distance ~33 mi, band near. -->
+    <record id="demo_client_birmingham_recycling" model="res.partner">
+        <field name="name">Birmingham Recycling Solutions Ltd</field>
+        <field name="is_company">1</field>
+        <field name="is_site">0</field>
+        <field name="street">Tyburn Road</field>
+        <field name="city">Birmingham</field>
+        <field name="zip">B24 9AA</field>
+        <field name="country_id" ref="base.uk"/>
+        <field name="phone">+44 121 100003</field>
+        <field name="email">ops@brsbirmingham.demo</field>
+    </record>
+    <record id="demo_site_birmingham_recycling" model="res.partner">
+        <field name="name">BRS - Tyburn Road Depot</field>
+        <field name="parent_id" ref="demo_client_birmingham_recycling"/>
+        <field name="type">other</field>
+        <field name="is_company">0</field>
+        <field name="is_site">1</field>
+        <field name="street">Tyburn Road</field>
+        <field name="city">Birmingham</field>
+        <field name="zip">B24 9AA</field>
+        <field name="country_id" ref="base.uk"/>
+    </record>
+    <record id="demo_asset_birmingham_inverter" model="maintenance.equipment">
+        <field name="name">SMA Sunny Tripower 25000TL Inverter</field>
+        <field name="partner_id" ref="demo_site_birmingham_recycling"/>
+        <field name="asset_type">inverter</field>
+        <field name="manufacturer">SMA</field>
+        <field name="model_number">STP 25000TL</field>
+        <field name="serial_number">SMA-B-25001</field>
+        <field name="system_capacity_kw">25.0</field>
+        <field name="install_date">2021-06-15</field>
+        <field name="warranty_end_date">2031-06-15</field>
+        <field name="monitoring_portal">sma_ema</field>
+        <field name="monitoring_plant_id">EMA-BHX-25001</field>
+    </record>
+
+    <!-- York: estate, biomass boiler. Distance ~168 mi, band far. -->
+    <record id="demo_client_york_estate" model="res.partner">
+        <field name="name">York Heritage Estates</field>
+        <field name="is_company">1</field>
+        <field name="is_site">0</field>
+        <field name="street">Tadcaster Road</field>
+        <field name="city">York</field>
+        <field name="zip">YO24 1QT</field>
+        <field name="country_id" ref="base.uk"/>
+        <field name="phone">+44 1904 100004</field>
+        <field name="email">estates@yorkheritage.demo</field>
+    </record>
+    <record id="demo_site_york_estate" model="res.partner">
+        <field name="name">York Heritage Estates - Manor House</field>
+        <field name="parent_id" ref="demo_client_york_estate"/>
+        <field name="type">other</field>
+        <field name="is_company">0</field>
+        <field name="is_site">1</field>
+        <field name="street">Tadcaster Road</field>
+        <field name="city">York</field>
+        <field name="zip">YO24 1QT</field>
+        <field name="country_id" ref="base.uk"/>
+    </record>
+    <record id="demo_asset_york_boiler" model="maintenance.equipment">
+        <field name="name">Heizomat HSV-50 Biomass Boiler</field>
+        <field name="partner_id" ref="demo_site_york_estate"/>
+        <field name="asset_type">boiler</field>
+        <field name="manufacturer">Heizomat</field>
+        <field name="model_number">HSV 50</field>
+        <field name="serial_number">HZM-YO-05001</field>
+        <field name="vg_number">VG-2024-0501</field>
+        <field name="system_capacity_kw">50.0</field>
+        <field name="install_date">2024-02-20</field>
+        <field name="warranty_end_date">2029-02-20</field>
+        <field name="monitoring_portal">none</field>
+    </record>
+
+    <!-- Inverness: highland energy co-op, solar farm. Distance ~472 mi, band far. -->
+    <record id="demo_client_inverness_energy" model="res.partner">
+        <field name="name">Inverness Highlands Energy Co-operative</field>
+        <field name="is_company">1</field>
+        <field name="is_site">0</field>
+        <field name="street">Strathpeffer Road</field>
+        <field name="city">Inverness</field>
+        <field name="zip">IV1 1AA</field>
+        <field name="country_id" ref="base.uk"/>
+        <field name="phone">+44 1463 100005</field>
+        <field name="email">contact@invernesshighlands.demo</field>
+    </record>
+    <record id="demo_site_inverness_solar_farm" model="res.partner">
+        <field name="name">Inverness Highlands - Solar Farm North</field>
+        <field name="parent_id" ref="demo_client_inverness_energy"/>
+        <field name="type">other</field>
+        <field name="is_company">0</field>
+        <field name="is_site">1</field>
+        <field name="street">Strathpeffer Road</field>
+        <field name="city">Inverness</field>
+        <field name="zip">IV1 1AA</field>
+        <field name="country_id" ref="base.uk"/>
+    </record>
+    <record id="demo_asset_inverness_inverter" model="maintenance.equipment">
+        <field name="name">Solis 50kW Solar Inverter (Site North)</field>
+        <field name="partner_id" ref="demo_site_inverness_solar_farm"/>
+        <field name="asset_type">inverter</field>
+        <field name="manufacturer">Solis</field>
+        <field name="model_number">S5-GR3P50K</field>
+        <field name="serial_number">SLS-IV-50001</field>
+        <field name="system_capacity_kw">50.0</field>
+        <field name="install_date">2020-11-30</field>
+        <field name="warranty_end_date">2030-11-30</field>
+        <field name="monitoring_portal">solis</field>
+        <field name="monitoring_plant_id">PLANT-IV-50001</field>
+    </record>
+
+</odoo>
