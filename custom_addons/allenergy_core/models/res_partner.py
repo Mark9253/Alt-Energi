@@ -71,5 +71,35 @@ class ResPartner(models.Model):
 
     @api.depends('zip')
     def _compute_postcode_band(self):
+        PostcodeDistance = self.env['allenergy.postcode.distance'].sudo()
+        records = PostcodeDistance.search_read([], ['outward_code', 'distance_miles'])
+        miles_by_area = {r['outward_code']: r['distance_miles'] for r in records}
         for partner in self:
-            partner.postcode_band = False
+            area = partner._allenergy_postcode_area()
+            miles = miles_by_area.get(area)
+            if miles is None:
+                partner.postcode_band = False
+            elif miles <= 30:
+                partner.postcode_band = 'local'
+            elif miles <= 75:
+                partner.postcode_band = 'near'
+            elif miles <= 150:
+                partner.postcode_band = 'mid'
+            else:
+                partner.postcode_band = 'far'
+
+    def _allenergy_postcode_area(self):
+        """Extract the alphabetic UK postcode area from the partner's zip.
+
+        WR2 4AY -> WR; B33 8TH -> B; EC1A 1AA -> EC. Returns '' if zip is empty.
+        """
+        self.ensure_one()
+        if not self.zip:
+            return ''
+        area = ''
+        for char in self.zip.strip().upper():
+            if char.isalpha():
+                area += char
+            else:
+                break
+        return area

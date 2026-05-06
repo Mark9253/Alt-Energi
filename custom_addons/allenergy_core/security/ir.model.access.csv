@@ -1,3 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_maintenance_equipment_allenergy_service,allenergy.maintenance.equipment.service,maintenance.model_maintenance_equipment,allenergy_core.group_allenergy_service,1,1,1,1
 access_maintenance_equipment_allenergy_sales,allenergy.maintenance.equipment.sales,maintenance.model_maintenance_equipment,allenergy_core.group_allenergy_sales,1,0,0,0
+access_postcode_distance_user,allenergy.postcode.distance.user,allenergy_core.model_allenergy_postcode_distance,base.group_user,1,0,0,0
+access_postcode_distance_admin,allenergy.postcode.distance.admin,allenergy_core.model_allenergy_postcode_distance,allenergy_core.group_allenergy_admin,1,1,1,1
