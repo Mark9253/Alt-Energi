@@ -1,1 +1,11 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_biomass_item_user,allenergy.worksheet.biomass.item.user,model_allenergy_worksheet_biomass_item,base.group_user,1,0,0,0
+access_biomass_item_admin,allenergy.worksheet.biomass.item.admin,model_allenergy_worksheet_biomass_item,allenergy_core.group_allenergy_admin,1,1,1,1
+access_biomass_service,allenergy.worksheet.biomass.service,model_allenergy_worksheet_biomass,allenergy_core.group_allenergy_service,1,1,1,1
+access_biomass_sales,allenergy.worksheet.biomass.sales,model_allenergy_worksheet_biomass,allenergy_core.group_allenergy_sales,1,0,0,0
+access_biomass_line_service,allenergy.worksheet.biomass.line.service,model_allenergy_worksheet_biomass_line,allenergy_core.group_allenergy_service,1,1,1,1
+access_biomass_line_sales,allenergy.worksheet.biomass.line.sales,model_allenergy_worksheet_biomass_line,allenergy_core.group_allenergy_sales,1,0,0,0
+access_biomass_remedial_service,allenergy.worksheet.biomass.remedial.service,model_allenergy_worksheet_biomass_remedial,allenergy_core.group_allenergy_service,1,1,1,1
+access_biomass_remedial_sales,allenergy.worksheet.biomass.remedial.sales,model_allenergy_worksheet_biomass_remedial,allenergy_core.group_allenergy_sales,1,0,0,0
+access_biomass_part_service,allenergy.worksheet.biomass.part.service,model_allenergy_worksheet_biomass_part,allenergy_core.group_allenergy_service,1,1,1,1
+access_biomass_part_sales,allenergy.worksheet.biomass.part.sales,model_allenergy_worksheet_biomass_part,allenergy_core.group_allenergy_sales,1,0,0,0

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_task_form_allenergy_worksheets" model="ir.ui.view">
+        <field name="name">project.task.form.allenergy.worksheets</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_open_biomass_worksheets" type="object"
+                        class="oe_stat_button" icon="fa-fire">
+                    <field name="biomass_worksheet_count" widget="statinfo" string="Biomass"/>
+                </button>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

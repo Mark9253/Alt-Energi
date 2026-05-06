@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <!-- Section 1a: Heizomat feed system (items 1-10) -->
+    <record id="biomass_item_001" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">10</field><field name="section">heizomat_feed</field>
+        <field name="name">Agitator System</field>
+    </record>
+    <record id="biomass_item_002" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">20</field><field name="section">heizomat_feed</field>
+        <field name="name">Agitator Motor</field>
+    </record>
+    <record id="biomass_item_003" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">30</field><field name="section">heizomat_feed</field>
+        <field name="name">Discharger</field>
+    </record>
+    <record id="biomass_item_004" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">40</field><field name="section">heizomat_feed</field>
+        <field name="name">Discharge Motor + Drop In Shaft Switch</field>
+    </record>
+    <record id="biomass_item_005" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">50</field><field name="section">heizomat_feed</field>
+        <field name="name">Rotary Valve</field>
+    </record>
+    <record id="biomass_item_006" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">60</field><field name="section">heizomat_feed</field>
+        <field name="name">Stoker Auger</field>
+    </record>
+    <record id="biomass_item_007" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">70</field><field name="section">heizomat_feed</field>
+        <field name="name">Rotary Valve Motor</field>
+    </record>
+    <record id="biomass_item_008" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">80</field><field name="section">heizomat_feed</field>
+        <field name="name">Gate Valve</field>
+    </record>
+    <record id="biomass_item_009" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">90</field><field name="section">heizomat_feed</field>
+        <field name="name">Chain Drive + Channel Switches</field>
+    </record>
+    <record id="biomass_item_010" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">100</field><field name="section">heizomat_feed</field>
+        <field name="name">Light Barrier / Ultrasonic Sensor</field>
+    </record>
+
+    <!-- Section 1b: Heizomat boiler (items 11-32) -->
+    <record id="biomass_item_011" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">110</field><field name="section">heizomat_boiler</field>
+        <field name="name">Primary Air Fan</field>
+    </record>
+    <record id="biomass_item_012" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">120</field><field name="section">heizomat_boiler</field>
+        <field name="name">Primary Air Fan 2</field>
+    </record>
+    <record id="biomass_item_013" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">130</field><field name="section">heizomat_boiler</field>
+        <field name="name">Primary Air Fan 3</field>
+    </record>
+    <record id="biomass_item_014" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">140</field><field name="section">heizomat_boiler</field>
+        <field name="name">Secondary Air Fan 1</field>
+    </record>
+    <record id="biomass_item_015" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">150</field><field name="section">heizomat_boiler</field>
+        <field name="name">Cast Iron Primary Air Bricks</field>
+    </record>
+    <record id="biomass_item_016" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">160</field><field name="section">heizomat_boiler</field>
+        <field name="name">Refractory Lining Front Door</field>
+    </record>
+    <record id="biomass_item_017" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">170</field><field name="section">heizomat_boiler</field>
+        <field name="name">Secondary Air Bricks</field>
+    </record>
+    <record id="biomass_item_018" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">180</field><field name="section">heizomat_boiler</field>
+        <field name="name">Back Arch</field>
+    </record>
+    <record id="biomass_item_019" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">190</field><field name="section">heizomat_boiler</field>
+        <field name="name">Ash Handling Chain</field>
+    </record>
+    <record id="biomass_item_020" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">200</field><field name="section">heizomat_boiler</field>
+        <field name="name">Front Chain Drum and Bearings</field>
+    </record>
+    <record id="biomass_item_021" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">210</field><field name="section">heizomat_boiler</field>
+        <field name="name">Ash Removal Motors</field>
+    </record>
+    <record id="biomass_item_022" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">220</field><field name="section">heizomat_boiler</field>
+        <field name="name">Ash Removal Register Cleaners</field>
+    </record>
+    <record id="biomass_item_023" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">230</field><field name="section">heizomat_boiler</field>
+        <field name="name">Ash Drop in Shaft Switch</field>
+    </record>
+    <record id="biomass_item_024" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">240</field><field name="section">heizomat_boiler</field>
+        <field name="name">Drive Gear Registry Cleaner</field>
+    </record>
+    <record id="biomass_item_025" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">250</field><field name="section">heizomat_boiler</field>
+        <field name="name">Grease nipples and Bearings</field>
+    </record>
+    <record id="biomass_item_026" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">260</field><field name="section">heizomat_boiler</field>
+        <field name="name">Flue Gas Fan</field>
+    </record>
+    <record id="biomass_item_027" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">270</field><field name="section">heizomat_boiler</field>
+        <field name="name">Lambda Sensor</field>
+    </record>
+    <record id="biomass_item_028" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">280</field><field name="section">heizomat_boiler</field>
+        <field name="name">All Seals</field>
+    </record>
+    <record id="biomass_item_029" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">290</field><field name="section">heizomat_boiler</field>
+        <field name="name">Expansion Vessel Pressure</field>
+    </record>
+    <record id="biomass_item_030" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">300</field><field name="section">heizomat_boiler</field>
+        <field name="name">Boiler Charge Pressure (1.5 Bar approx)</field>
+    </record>
+    <record id="biomass_item_031" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">310</field><field name="section">heizomat_boiler</field>
+        <field name="name">Pressurisation Unit</field>
+    </record>
+    <record id="biomass_item_032" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">320</field><field name="section">heizomat_boiler</field>
+        <field name="name">X-Pot</field>
+    </record>
+
+    <!-- Section 1c: Heizomat fireplace (items 33-36) -->
+    <record id="biomass_item_033" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">330</field><field name="section">heizomat_fireplace</field>
+        <field name="name">Flue Pipe Connections</field>
+    </record>
+    <record id="biomass_item_034" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">340</field><field name="section">heizomat_fireplace</field>
+        <field name="name">Flue Condition / Corrosion</field>
+    </record>
+    <record id="biomass_item_035" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">350</field><field name="section">heizomat_fireplace</field>
+        <field name="name">Empty Ash Bin</field>
+    </record>
+    <record id="biomass_item_036" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">360</field><field name="section">heizomat_fireplace</field>
+        <field name="name">Visual of Flue</field>
+    </record>
+
+    <!-- Section 2: Controls (items 37-47, always shown) -->
+    <record id="biomass_item_037" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">370</field><field name="section">controls</field>
+        <field name="name">General Wiring / Connections</field>
+    </record>
+    <record id="biomass_item_038" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">380</field><field name="section">controls</field>
+        <field name="name">Door Safety Switch</field>
+    </record>
+    <record id="biomass_item_039" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">390</field><field name="section">controls</field>
+        <field name="name">Safety Thermostat</field>
+    </record>
+    <record id="biomass_item_040" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">400</field><field name="section">controls</field>
+        <field name="name">Boiler Temp Sensor</field>
+    </record>
+    <record id="biomass_item_041" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">410</field><field name="section">controls</field>
+        <field name="name">Flue Gas Temp Sensor</field>
+    </record>
+    <record id="biomass_item_042" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">420</field><field name="section">controls</field>
+        <field name="name">Lambda Probe</field>
+    </record>
+    <record id="biomass_item_043" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">430</field><field name="section">controls</field>
+        <field name="name">Ignition</field>
+    </record>
+    <record id="biomass_item_044" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">440</field><field name="section">controls</field>
+        <field name="name">Clock</field>
+    </record>
+    <record id="biomass_item_045" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">450</field><field name="section">controls</field>
+        <field name="name">Control Unit General</field>
+    </record>
+    <record id="biomass_item_046" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">460</field><field name="section">controls</field>
+        <field name="name">Ember Conservation Relay / Glow Plug</field>
+    </record>
+    <record id="biomass_item_047" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">470</field><field name="section">controls</field>
+        <field name="name">Continuous Mode / 3-Port Operation</field>
+    </record>
+
+    <!-- Section 3: Fuel general (items 48-53, always shown) -->
+    <record id="biomass_item_048" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">480</field><field name="section">fuel_general</field>
+        <field name="name">Fuel Type</field>
+    </record>
+    <record id="biomass_item_049" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">490</field><field name="section">fuel_general</field>
+        <field name="name">Fuel Quality</field>
+    </record>
+    <record id="biomass_item_050" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">500</field><field name="section">fuel_general</field>
+        <field name="name">Safe to Use</field>
+    </record>
+    <record id="biomass_item_051" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">510</field><field name="section">fuel_general</field>
+        <field name="name">Clean / De-grease all Components</field>
+    </record>
+    <record id="biomass_item_052" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">520</field><field name="section">fuel_general</field>
+        <field name="name">Empty Ash Bin</field>
+    </record>
+    <record id="biomass_item_053" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">530</field><field name="section">fuel_general</field>
+        <field name="name">Unsafe Situation Identified</field>
+    </record>
+
+    <!-- Section 4: Non-Heizomat (items 54-82) -->
+    <record id="biomass_item_054" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">540</field><field name="section">non_heizomat</field>
+        <field name="name">Empty the ash Bin</field>
+    </record>
+    <record id="biomass_item_055" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">550</field><field name="section">non_heizomat</field>
+        <field name="name">Check seals on ash box and connection to boiler</field>
+    </record>
+    <record id="biomass_item_056" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">560</field><field name="section">non_heizomat</field>
+        <field name="name">Remove ash from secondary combustion chamber</field>
+    </record>
+    <record id="biomass_item_057" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">570</field><field name="section">non_heizomat</field>
+        <field name="name">Check water pressure</field>
+    </record>
+    <record id="biomass_item_058" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">580</field><field name="section">non_heizomat</field>
+        <field name="name">Check safety valve(s)</field>
+    </record>
+    <record id="biomass_item_059" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">590</field><field name="section">non_heizomat</field>
+        <field name="name">Inspect and clean grate</field>
+    </record>
+    <record id="biomass_item_060" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">600</field><field name="section">non_heizomat</field>
+        <field name="name">Check seal on combustion chamber door</field>
+    </record>
+    <record id="biomass_item_061" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">610</field><field name="section">non_heizomat</field>
+        <field name="name">Check fire bed level sensor</field>
+    </record>
+    <record id="biomass_item_062" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">620</field><field name="section">non_heizomat</field>
+        <field name="name">Clean secondary air openings in secondary combustion chamber</field>
+    </record>
+    <record id="biomass_item_063" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">630</field><field name="section">non_heizomat</field>
+        <field name="name">Check refractory lining</field>
+    </record>
+    <record id="biomass_item_064" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">640</field><field name="section">non_heizomat</field>
+        <field name="name">Clean flue tube</field>
+    </record>
+    <record id="biomass_item_065" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">650</field><field name="section">non_heizomat</field>
+        <field name="name">Remove flue ash from chimney</field>
+    </record>
+    <record id="biomass_item_066" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">660</field><field name="section">non_heizomat</field>
+        <field name="name">Clean heat exchanger, remove flue ash</field>
+    </record>
+    <record id="biomass_item_067" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">670</field><field name="section">non_heizomat</field>
+        <field name="name">Inspect heat exchanger tubes for tar deposits</field>
+    </record>
+    <record id="biomass_item_068" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">680</field><field name="section">non_heizomat</field>
+        <field name="name">Vacuum out Lambda probe (Do not remove it)</field>
+    </record>
+    <record id="biomass_item_069" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">690</field><field name="section">non_heizomat</field>
+        <field name="name">Clean flue gas recirculator</field>
+    </record>
+    <record id="biomass_item_070" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">700</field><field name="section">non_heizomat</field>
+        <field name="name">Extinguishers, malfunction indicators or alarms</field>
+    </record>
+    <record id="biomass_item_071" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">710</field><field name="section">non_heizomat</field>
+        <field name="name">Trial heating and test residual oxygen / lambda probe</field>
+    </record>
+    <record id="biomass_item_072" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">720</field><field name="section">non_heizomat</field>
+        <field name="name">Clean control panel and casing</field>
+    </record>
+    <record id="biomass_item_073" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">730</field><field name="section">non_heizomat</field>
+        <field name="name">Inspect blades on rotary valve</field>
+    </record>
+    <record id="biomass_item_074" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">740</field><field name="section">non_heizomat</field>
+        <field name="name">Lubricate drive chains for stoker and ash screws</field>
+    </record>
+    <record id="biomass_item_075" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">750</field><field name="section">non_heizomat</field>
+        <field name="name">Perform and check ash removal process</field>
+    </record>
+    <record id="biomass_item_076" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">760</field><field name="section">non_heizomat</field>
+        <field name="name">Safety switches on drop chute and maintenance cover</field>
+    </record>
+    <record id="biomass_item_077" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">770</field><field name="section">non_heizomat</field>
+        <field name="name">Check closing of tilting grate</field>
+    </record>
+    <record id="biomass_item_078" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">780</field><field name="section">non_heizomat</field>
+        <field name="name">Clean draught fan and fan housing, replace seal</field>
+    </record>
+    <record id="biomass_item_079" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">790</field><field name="section">non_heizomat</field>
+        <field name="name">Inspect ash box position switch and seals</field>
+    </record>
+    <record id="biomass_item_080" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">800</field><field name="section">non_heizomat</field>
+        <field name="name">Perform emission measurement</field>
+    </record>
+    <record id="biomass_item_081" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">810</field><field name="section">non_heizomat</field>
+        <field name="name">Check safety temperature limiter</field>
+    </record>
+    <record id="biomass_item_082" model="allenergy.worksheet.biomass.item">
+        <field name="sequence">820</field><field name="section">non_heizomat</field>
+        <field name="name">Reset maintenance counter</field>
+    </record>
+
+</odoo>

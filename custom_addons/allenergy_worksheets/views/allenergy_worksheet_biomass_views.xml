@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_worksheet_biomass_item_tree" model="ir.ui.view">
+        <field name="name">allenergy.worksheet.biomass.item.list</field>
+        <field name="model">allenergy.worksheet.biomass.item</field>
+        <field name="arch" type="xml">
+            <list string="Biomass Worksheet Items" editable="bottom" default_order="sequence">
+                <field name="sequence" widget="handle"/>
+                <field name="section"/>
+                <field name="name"/>
+                <field name="applies_when" readonly="1"/>
+                <field name="active" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_worksheet_biomass_item_search" model="ir.ui.view">
+        <field name="name">allenergy.worksheet.biomass.item.search</field>
+        <field name="model">allenergy.worksheet.biomass.item</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="section"/>
+                <filter string="Heizomat Only" name="heizomat"
+                        domain="[('applies_when','=','heizomat')]"/>
+                <filter string="Non-Heizomat Only" name="non_heizomat"
+                        domain="[('applies_when','=','non_heizomat')]"/>
+                <filter string="Always Shown" name="always"
+                        domain="[('applies_when','=','always')]"/>
+                <group expand="1" string="Group By">
+                    <filter string="Section" name="group_section"
+                            context="{'group_by': 'section'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_worksheet_biomass_item" model="ir.actions.act_window">
+        <field name="name">Biomass Worksheet Items</field>
+        <field name="res_model">allenergy.worksheet.biomass.item</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'search_default_group_section': 1}</field>
+    </record>
+
+    <record id="view_worksheet_biomass_line_tree" model="ir.ui.view">
+        <field name="name">allenergy.worksheet.biomass.line.list</field>
+        <field name="model">allenergy.worksheet.biomass.line</field>
+        <field name="arch" type="xml">
+            <list editable="bottom" default_order="sequence">
+                <field name="sequence" widget="handle"/>
+                <field name="section" optional="show"/>
+                <field name="name" readonly="1"/>
+                <field name="status"/>
+                <field name="comments"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_worksheet_biomass_form" model="ir.ui.view">
+        <field name="name">allenergy.worksheet.biomass.form</field>
+        <field name="model">allenergy.worksheet.biomass</field>
+        <field name="arch" type="xml">
+            <form string="Biomass Worksheet">
+                <header>
+                    <button name="action_sign" type="object" string="Mark Signed"
+                            class="btn-primary"
+                            invisible="state == 'signed' or not client_signature"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,signed"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name" readonly="1"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="task_id" options="{'no_create': True}"/>
+                            <field name="equipment_id" options="{'no_create': True}"/>
+                            <field name="manufacturer" readonly="1"/>
+                            <field name="is_heizomat" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="partner_id" readonly="1"/>
+                            <field name="client_id" readonly="1"/>
+                            <field name="visit_date"/>
+                            <field name="engineer_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Inspection" name="inspection">
+                            <field name="line_ids" context="{'group_by': 'section'}">
+                                <list editable="bottom" default_order="sequence">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="section" optional="show"/>
+                                    <field name="name" readonly="1"/>
+                                    <field name="status"/>
+                                    <field name="comments"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Recommended Remedial Works" name="remedial">
+                            <field name="remedial_ids">
+                                <list editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="urgency"/>
+                                    <field name="description"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Parts and Materials Used" name="parts">
+                            <field name="part_ids">
+                                <list editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="product_id"/>
+                                    <field name="description"/>
+                                    <field name="quantity"/>
+                                    <field name="chargeable"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Sign-Off" name="signoff">
+                            <group>
+                                <group string="Overall">
+                                    <field name="overall_condition"/>
+                                </group>
+                                <group string="Client Sign-Off">
+                                    <field name="client_print_name"/>
+                                    <field name="client_position"/>
+                                    <field name="client_signature" widget="signature"/>
+                                    <field name="client_signature_date"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_worksheet_biomass_tree" model="ir.ui.view">
+        <field name="name">allenergy.worksheet.biomass.list</field>
+        <field name="model">allenergy.worksheet.biomass</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="task_id"/>
+                <field name="equipment_id"/>
+                <field name="partner_id"/>
+                <field name="visit_date"/>
+                <field name="engineer_id"/>
+                <field name="overall_condition"/>
+                <field name="state" widget="badge"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_worksheet_biomass" model="ir.actions.act_window">
+        <field name="name">Biomass Worksheets</field>
+        <field name="res_model">allenergy.worksheet.biomass</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_allenergy_worksheets"
+              name="Worksheets"
+              parent="allenergy_core.menu_allenergy_root"
+              sequence="20"/>
+
+    <menuitem id="menu_worksheet_biomass"
+              name="Biomass Worksheets"
+              parent="menu_allenergy_worksheets"
+              action="action_worksheet_biomass"
+              sequence="10"/>
+
+    <menuitem id="menu_worksheet_biomass_item"
+              name="Biomass Items (Master)"
+              parent="allenergy_core.menu_allenergy_configuration"
+              action="action_worksheet_biomass_item"
+              sequence="20"/>
+
+</odoo>
