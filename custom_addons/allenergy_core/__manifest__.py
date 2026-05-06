@@ -29,6 +29,7 @@ Provides:
     'data': [
         'security/allenergy_security.xml',
         'security/ir.model.access.csv',
+        'data/ir_config_parameter.xml',
         'data/allenergy.postcode.distance.csv',
         'views/postcode_distance_views.xml',
         'views/res_partner_views.xml',

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <!-- Depot location: Worcester HQ (WR2 4AY).
+         The lat/long here are postcode-centroid placeholders. Replace with the
+         live postcodes.io geocode once allenergy_integrations is installed,
+         or correct manually if the centroid lands away from the building. -->
+    <record id="param_depot_postcode" model="ir.config_parameter">
+        <field name="key">allenergy.depot_postcode</field>
+        <field name="value">WR2 4AY</field>
+    </record>
+    <record id="param_depot_latitude" model="ir.config_parameter">
+        <field name="key">allenergy.depot_latitude</field>
+        <field name="value">52.193600</field>
+    </record>
+    <record id="param_depot_longitude" model="ir.config_parameter">
+        <field name="key">allenergy.depot_longitude</field>
+        <field name="value">-2.238600</field>
+    </record>
+
+    <!-- Geofencing -->
+    <record id="param_default_geofence_radius_meters" model="ir.config_parameter">
+        <field name="key">allenergy.default_geofence_radius_meters</field>
+        <field name="value">150</field>
+    </record>
+    <record id="param_geocoding_review_threshold_meters" model="ir.config_parameter">
+        <field name="key">allenergy.geocoding_review_threshold_meters</field>
+        <field name="value">200</field>
+    </record>
+
+    <!-- Time accounting (subject to pricing workshop outcome) -->
+    <record id="param_commute_deduction_minutes" model="ir.config_parameter">
+        <field name="key">allenergy.commute_deduction_minutes</field>
+        <field name="value">30</field>
+    </record>
+    <record id="param_business_hours_start" model="ir.config_parameter">
+        <field name="key">allenergy.business_hours_start</field>
+        <field name="value">08:00</field>
+    </record>
+    <record id="param_business_hours_end" model="ir.config_parameter">
+        <field name="key">allenergy.business_hours_end</field>
+        <field name="value">17:00</field>
+    </record>
+
+</odoo>
